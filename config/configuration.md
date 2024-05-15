@@ -4,7 +4,7 @@ description: How to configure Electron Forge
 
 # Overview
 
-Electron Forge configuration is centralized in a single configuration object. You can specify this config in your package.json on the `config.forge` property. This property can have be in one of two forms:
+Electron Forge configuration is centralized in a single configuration object. You can specify this config in your package.json on the `config.forge` property. This property can be in one of two forms:
 
 * An object containing your entire Forge configuration.
 * A relative path pointing at a JavaScript file that exports your config.
