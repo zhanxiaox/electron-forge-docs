@@ -32,11 +32,11 @@ jobs:
     - name: Create a Temporary package.json
       run: npm init --yes
     - name: Install @electron/lint-roller
-      run: npm install --save-dev @electron/lint-roller
+      run: npm install --save-dev @electron/lint-roller@^2.1.0
     - name: Run markdownlint
       run: npx electron-markdownlint --fix "**/*.md"
     - name: Lint JS in Markdown with standard
-      run: npx electron-lint-markdown-standard --ignore-path .markdownlintignore --semi --fix "**/*.md"
+      run: npx lint-roller-markdown-standard --ignore-path .markdownlintignore --semi --fix "**/*.md"
     - name: Push Any Changes
       run: |
         rm -rf node_modules
