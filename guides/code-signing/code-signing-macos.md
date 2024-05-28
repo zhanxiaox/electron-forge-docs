@@ -111,8 +111,6 @@ For further reading on entitlements, see the following pages in Apple developer 
 Under the hood, Electron Forge uses the [`@electron/notarize`](https://github.com/electron/notarize) tool to notarize your macOS application.
 {% endhint %}
 
-The `osxNotarize` configuration object only supports `notarytool` as of Electron Forge v7.0.0.
-
 The `notarytool` command has three authentication options, which are detailed below. Note that you will want to use a `forge.config.js` configuration so that you can load environment variables into your Forge config.
 
 {% hint style="danger" %}
@@ -140,7 +138,6 @@ module.exports = {
   packagerConfig: {
     // ...
     osxNotarize: {
-      tool: 'notarytool',
       appleId: process.env.APPLE_ID,
       appleIdPassword: process.env.APPLE_PASSWORD,
       teamId: process.env.APPLE_TEAM_ID
@@ -174,7 +171,6 @@ module.exports = {
   packagerConfig: {
     // ...
     osxNotarize: {
-      tool: 'notarytool',
       appleApiKey: process.env.APPLE_API_KEY,
       appleApiKeyId: process.env.APPLE_API_KEY_ID,
       appleApiIssuer: process.env.APPLE_API_ISSUER
@@ -209,7 +205,6 @@ module.exports = {
   packagerConfig: {
     // ...
     osxNotarize: {
-      tool: 'notarytool',
       keychain: 'my-keychain',
       keychainProfile: 'my-keychain-profile'
     }
@@ -229,7 +224,6 @@ module.exports = {
   packagerConfig: {
     osxSign: {},
     osxNotarize: {
-      tool: 'notarytool',
       appleId: process.env.APPLE_ID,
       appleIdPassword: process.env.APPLE_PASSWORD,
       teamId: process.env.APPLE_TEAM_ID
