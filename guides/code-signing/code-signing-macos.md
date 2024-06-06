@@ -191,12 +191,14 @@ You can do this directly in your terminal via the `notarytool store-credentials`
 man notarytool
 ```
 
-There are two mandatory fields for `osxNotarize` if you are using this strategy:
+There are two available fields for `osxNotarize` if you are using this strategy:
 
-| Field             | Type   | Description                                                                     |
-| ----------------- | ------ | ------------------------------------------------------------------------------- |
-| `keychain`        | string | Name of (or path to) the keychain containing the profile with your credentials. |
-| `keychainProfile` | string | Name of the keychain profile containing your notarization credentials.          |
+| Field                 | Type   | Description                                                                     |
+| --------------------- | ------ | ------------------------------------------------------------------------------- |
+| `keychainProfile`     | string | Name of the keychain profile containing your notarization credentials.          |
+| `keychain` (optional) | string | Name of (or path to) the keychain containing the profile with your credentials. |
+
+Note that if you use `notarytool store-credentials`, the `keychain` parameter can be auto-detected.
 
 {% code title="forge.config.js" %}
 ```javascript
@@ -205,7 +207,6 @@ module.exports = {
   packagerConfig: {
     // ...
     osxNotarize: {
-      keychain: 'my-keychain',
       keychainProfile: 'my-keychain-profile'
     }
   }
