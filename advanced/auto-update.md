@@ -4,7 +4,11 @@ description: Set up automatic updates for your Electron application
 
 # Auto Update
 
-Setting up Auto Updates in your app with Electron Forge is mostly the same process [as described in the Electron docs](https://electronjs.org/docs/tutorial/updates).  Forge enhances your workflow by publishing your app to the right place for you. There are three main ways you can do auto updates.
+Setting up Auto Updates in your app with Electron Forge is mostly the same process [as described in the Electron docs](https://electronjs.org/docs/tutorial/updates). Forge enhances your workflow by publishing your app to the right place for you. There are three main ways you can do auto updates.
+
+{% hint style="warning" %}
+Note that having a [signed](../guides/code-signing/code-signing-macos.md) application is a pre-requisite for using auto updates on macOS.
+{% endhint %}
 
 ## Open source apps: update.electronjs.org
 
@@ -21,7 +25,7 @@ If you are using any of Forge's built-in Publishers that upload your artifacts t
 
 ## Hosting your own update server
 
-If you're not open source or you want slightly more control over your update service (like percentage based rollouts, or more release channels) you can host your own update server such as [`nucleus`](https://github.com/atlassian/nucleus) or [`nuts`](https://github.com/GitbookIO/nuts).  See the full list of known Electron update servers in the [Electron's Updating Applications docs](https://electronjs.org/docs/tutorial/updates#deploying-an-update-server).
+If you're not open source or you want slightly more control over your update service (like percentage based rollouts, or more release channels) you can host your own update server such as [`nucleus`](https://github.com/atlassian/nucleus) or [`nuts`](https://github.com/GitbookIO/nuts). See the full list of known Electron update servers in the [Electron's Updating Applications docs](https://electronjs.org/docs/tutorial/updates#deploying-an-update-server).
 
 Each update server will have their own configuration for your actual app, but publishing should be done from Forge for most of them:
 
