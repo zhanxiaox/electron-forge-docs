@@ -22,8 +22,8 @@ In Electron Forge, most hooks are **simple hooks**, which perform side effects d
 
 * **Arguments:**
   * **`config:`**[**`ResolvedForgeConfig`**](https://js.electronforge.io/interfaces/\_electron\_forge\_shared\_types.ResolvedForgeConfig.html) - Forge configuration object
-  * **`platform: string`**  - Operating system platform
-  * **`arch: string`**  - CPU architecture
+  * **`platform: string`** - Operating system platform
+  * **`arch: string`** - CPU architecture
 * **Returns: `Promise<void>`**
 
 `generateAssets()` is invoked before Forge's **`start`** or **`package`** commands.
@@ -34,7 +34,7 @@ For instance, you could use this hook to generate a license file containing the 
 
 ### `postStart`
 
-* **Arguments:**&#x20;
+* **Arguments:**
   * **`config:`**[**`ResolvedForgeConfig`**](https://js.electronforge.io/interfaces/\_electron\_forge\_shared\_types.ResolvedForgeConfig.html) - Forge configuration object
   * **`appProcess:`**[**`ChildProcess`**](https://nodejs.org/api/child\_process.html#class-childprocess) **-** Node.js child process instance
 * **Returns: `Promise<void>`**
@@ -57,7 +57,7 @@ module.exports = {
 
 ### `prePackage`
 
-* **Arguments:**&#x20;
+* **Arguments:**
   * **`config:`**[**`ResolvedForgeConfig`**](https://js.electronforge.io/interfaces/\_electron\_forge\_shared\_types.ResolvedForgeConfig.html) - Forge configuration object
   * **`platform: string`** - Operating system platform
   * **`arch: string`** - CPU architecture
@@ -75,7 +75,7 @@ module.exports = {
   * **`arch: string`** - CPU architecture
 * **Returns: `Promise<void>`**
 
-`packageAfterCopy()` is called inside the [`afterCopy`](https://electron.github.io/electron-packager/main/interfaces/electronpackager.options.html#aftercopy) hook of Electron Packager.
+`packageAfterCopy()` is called inside the [`afterCopy`](https://electron.github.io/packager/main/interfaces/Options.html#afterCopy) hook of Electron Packager.
 
 During Forge's **`package`** step, Electron Packager copies your app's build directory to a temporary folder.
 
@@ -91,7 +91,7 @@ The `afterCopy` hook runs after this copy step.
   * **`arch: string`** - CPU architecture
 * **Returns: `Promise<void>`**
 
-`packageAfterPrune()` is called inside the [`afterPrune`](https://electron.github.io/electron-packager/master/interfaces/electronpackager.options.html#afterprune) hook of Electron Packager.
+`packageAfterPrune()` is called inside the [`afterPrune`](https://electron.github.io/packager/main/interfaces/Options.html#afterPrune) hook of Electron Packager.
 
 During Forge's **`package`** step, Electron Packager prunes non-production `node_modules` dependencies from the temporary folder your app is copied to. This step minimizes the size of your app's production bundle.
 
@@ -105,13 +105,13 @@ The `afterPrune` hook runs after this prune step.
 
 * **Arguments:**
   * **`config:`**[**`ResolvedForgeConfig`**](https://js.electronforge.io/interfaces/\_electron\_forge\_shared\_types.ResolvedForgeConfig.html)- Forge configuration object
-  * **`buildPath: string`**- the Electron binary's temporary folder path&#x20;
+  * **`buildPath: string`**- the Electron binary's temporary folder path
   * **`electronVersion: string`**- the app's Electron version
   * **`platform: string`** - Operating system platform
   * **`arch: string`** - CPU architecture
 * **Returns: `Promise<void>`**
 
-`packageAfterExtract()` is called inside the [`afterExtract`](https://electron.github.io/electron-packager/master/interfaces/electronpackager.options.html#afterextract) hook of Electron Packager.
+`packageAfterExtract()` is called inside the [`afterExtract`](https://electron.github.io/packager/main/interfaces/Options.html#afterExtract) hook of Electron Packager.
 
 During Forge's **`package`** step, Electron Packager extracts your Electron binary into a temporary folder.
 
@@ -123,7 +123,7 @@ The `afterExtract` hook runs after this extract step.
   * **`config:`**[**`ResolvedForgeConfig`**](https://js.electronforge.io/interfaces/\_electron\_forge\_shared\_types.ResolvedForgeConfig.html)- Forge configuration object
   * **`packageResult: Object`**
     * **`platform: string`** - Operating system platform
-    * **`arch: string`**  - CPU architecture
+    * **`arch: string`** - CPU architecture
     * **`outputPaths: string[]`** - filesystem paths for package output
 * **Returns: `Promise<void>`**
 
@@ -173,7 +173,7 @@ It is passed an array of [`MakeResult`](https://js.electronforge.io/interfaces/\
 
 * **Arguments:**
   * **`config:`**[**`ResolvedForgeConfig`**](https://js.electronforge.io/interfaces/\_electron\_forge\_shared\_types.ResolvedForgeConfig.html)- Forge configuration object
-  * **`packageJson: Record<string, unknown>`** -  Full package.json object
+  * **`packageJson: Record<string, unknown>`** - Full package.json object
 * **Returns: `Promise<Record<string, unknown> | void>`**
 
 `readPackageJson()` is called every time Forge attempts to read your `package.json` file.
