@@ -23,27 +23,24 @@ You can only build the pkg target on macOS machines while targeting the `darwin`
 
 To use `@electron-forge/maker-pkg`, add it to the `makers` array in your Forge configuration.
 
-{% code title="forge.config.js" %}
-```javascript
-module.exports = {
+<pre class="language-javascript" data-title="forge.config.js"><code class="lang-javascript">module.exports = {
   makers: [
-    {
-      name: '@electron-forge/maker-pkg',
-      config: {
-        keychain: 'my-secret-ci-keychain'
-        // other configuration options
-      }
-    }
-  ]
+<strong>    {
+</strong><strong>      name: '@electron-forge/maker-pkg',
+</strong><strong>      config: {
+</strong><strong>        keychain: 'my-secret-ci-keychain'
+</strong><strong>        // other configuration options
+</strong><strong>      }
+</strong><strong>    }
+</strong>  ]
 };
-```
-{% endcode %}
+</code></pre>
 
 All configuration options are optional, and options are documented in the API docs for [`MakerPkgConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_pkg.MakerPKGConfig.html).
 
 ### Installation scripts
 
-With the pkg maker, you can add either a  `preinstall` or `postinstall` bash script that runs before and after your app is installed, respectively.
+With the pkg maker, you can add either a `preinstall` or `postinstall` bash script that runs before and after your app is installed, respectively.
 
 Both `preinstall` and `postinstall` scripts need to:
 
@@ -63,18 +60,19 @@ my-app
 
 Then, your Forge configuration would need to point to the `./scripts` folder.
 
-<pre class="language-javascript"><code class="lang-javascript">const path = require('node:path');
-
-<strong>module.exports = {
-</strong>  makers: [
+<pre class="language-javascript" data-title="forge.config.js"><code class="lang-javascript"><strong>const path = require('node:path');
+</strong>
+module.exports = {
+  makers: [
     {
       name: '@electron-forge/maker-pkg',
       config: {
-        install: path.join(__dirname, 'scripts),
-      },
-    },
+<strong>        install: path.join(__dirname, 'scripts)
+</strong>      }
+    }
   ]
-}
+};
+
 </code></pre>
 
 ## Debugging
