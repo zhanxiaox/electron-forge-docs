@@ -34,7 +34,7 @@ module.exports = {
         // other configuration options
       },
     },
-  ];
+  ]
 }
 
 ```
@@ -74,7 +74,7 @@ Then, your Forge configuration would need to point to the `./scripts` folder.
         install: path.join(__dirname, 'scripts),
       },
     },
-  ];
+  ]
 }
 </code></pre>
 
