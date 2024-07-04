@@ -30,13 +30,12 @@ module.exports = {
     {
       name: '@electron-forge/maker-pkg',
       config: {
-        keychain: 'my-secret-ci-keychain',
+        keychain: 'my-secret-ci-keychain'
         // other configuration options
-      },
-    },
+      }
+    }
   ]
-}
-
+};
 ```
 {% endcode %}
 
