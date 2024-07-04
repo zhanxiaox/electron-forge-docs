@@ -4,6 +4,11 @@
 * [Importing an Existing Project](import-existing-project.md)
 * [CLI](cli.md)
 
+## Core Concepts
+
+* [Why Electron Forge](core-concepts/why-electron-forge.md)
+* [Build Lifecycle](core-concepts/build-lifecycle.md)
+
 ## Configuration <a href="#config" id="config"></a>
 
 * [Overview](config/configuration.md)
@@ -34,11 +39,6 @@
   * [S3](config/publishers/s3.md)
   * [Snapcraft](config/publishers/snapcraft.md)
 * [Hooks](config/hooks.md)
-
-## Core Concepts
-
-* [Why Electron Forge](core-concepts/why-electron-forge.md)
-* [Build Lifecycle](core-concepts/build-lifecycle.md)
 
 ## Built-in Templates <a href="#templates" id="templates"></a>
 

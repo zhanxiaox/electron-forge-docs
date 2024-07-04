@@ -6,8 +6,6 @@ description: How Forge takes your app code from development to distribution.
 
 Once your app is ready to be released, Electron Forge can handle the rest to make sure it gets into your users' hands. The complete build flow for Electron Forge can be broken down into three smaller steps:
 
-<figure><img src="../.gitbook/assets/Untitled-2022-08-26-1442 (2).png" alt="Flowchart showing the Electron Forge build flow. Starting with a &#x22;development Electron app&#x22;, the first step is &#x22;Package&#x22;. Package has an output of &#x22;executable app bundle&#x22; and flows into the &#x22;Make&#x22; step. Make has an output of &#x22;installers or archives&#x22; and flows into the &#x22;Publish&#x22; step. Publish has an output of &#x22;uploaded to cloud storage for distribution&#x22;. Each step depends on the previous one."><figcaption><p>Forge's build flow</p></figcaption></figure>
-
 Each one of these steps is a separate command exposed through Forge's `electron-forge` command line interface, and is usually mapped to a script in your package.json file.
 
 {% hint style="info" %}
@@ -15,6 +13,17 @@ Each one of these steps is a separate command exposed through Forge's `electron-
 
 Running each of these tasks will also run the previous ones in the sequence (i.e. running the `electron-forge publish` script will first run `package` and `make` as prerequisite steps).
 {% endhint %}
+
+```mermaid fullWidth="false"
+graph TB
+    dev["fa:fa-code development Electron project"] -.-> package
+    publish -.-> cloud
+    subgraph forge["fa:fa-hammer Electron Forge"]
+        package["fa:fa-box Package"] -->|executable app bundle| make 
+        make["fa:fa-compact-disc Make"] -->|platform installers| publish["fa:fa-upload Publish"]
+    end
+    cloud["fa:fa-cloud Uploaded to cloud object storage"]
+```
 
 ## Step 1: Package
 
