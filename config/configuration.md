@@ -156,8 +156,8 @@ Check out the [makers](makers/ "mention") documentation for all official makers 
 module.exports = {
   makers: [
     {
-      name: "@electron-forge/maker-zip",
-      platforms: ["darwin"]
+      name: '@electron-forge/maker-zip',
+      platforms: ['darwin']
     }
   ]
 };
