@@ -91,7 +91,7 @@ module.exports = {
 {% endtabs %}
 
 {% hint style="success" %}
-All properties in your Forge configuration are optional. Initializing your project with one of the [Broken link](broken-reference "mention") will include some default recommended config options.
+All properties in your Forge configuration are optional. Initializing your project with one of the built-in templates will include some default recommended config options.
 {% endhint %}
 
 ### Electron Packager config
