@@ -91,7 +91,7 @@ module.exports = {
 {% endtabs %}
 
 {% hint style="success" %}
-All properties in your Forge configuration are optional. Initializing your project with one of the [Broken link](broken-reference "mention") will initialize some standard defaults.
+All properties in your Forge configuration are optional. Initializing your project with one of the [Broken link](broken-reference "mention") will include some default recommended config options.
 {% endhint %}
 
 ### Electron Packager config
@@ -147,7 +147,7 @@ The required `buildPath` and `electronVersion` options for `@electron/rebuild` a
 
 ### Makers
 
-The top-level `makers`  property on the configuration object is an array of maker configurations. Each maker will generate a distributable artifact for your packaged application in the [#make](../cli.md#make "mention") step (e.g. [squirrel.windows.md](makers/squirrel.windows.md "mention") on Windows or [dmg.md](makers/dmg.md "mention") on macOS).
+The top-level `makers` property on the configuration object is an array of maker configurations. Each maker will generate a distributable artifact for your packaged application in the [#make](../cli.md#make "mention") step (e.g. [squirrel.windows.md](makers/squirrel.windows.md "mention") on Windows or [dmg.md](makers/dmg.md "mention") on macOS).
 
 Check out the [makers](makers/ "mention") documentation for all official makers and their config options, and the[writing-makers.md](../advanced/extending-electron-forge/writing-makers.md "mention") guide for implementing your own Make step build targets.
 
