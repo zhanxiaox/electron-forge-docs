@@ -33,7 +33,7 @@ module.exports = {
       }
     }
   ]
-}
+};
 ```
 
 Configuration options are documented in [`MakerFlatpakConfig`](https://js.electronforge.io/classes/\_electron\_forge\_maker\_flatpak.MakerFlatpak-1.html#config).

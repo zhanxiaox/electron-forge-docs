@@ -39,7 +39,7 @@ module.exports = {
       }
     }
   ]
-}
+};
 ```
 
 Configuration options are documented in [`MakerWixConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_wix.MakerWixConfig.html).
