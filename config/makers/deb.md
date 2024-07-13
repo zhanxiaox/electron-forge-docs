@@ -6,21 +6,42 @@ description: >-
 
 # deb
 
-The deb target builds [`.deb` packages](https://en.wikipedia.org/wiki/Deb_%28file_format%29), which are the standard package format for Debian-based Linux distributions such as Ubuntu.  You can only build the deb target on Linux or macOS machines with the `fakeroot` and `dpkg` packages installed.
+The deb target builds [`.deb` packages](https://www.debian.org/doc/manuals/debian-faq/pkg-basics.en.html), which are the standard package format for Debian-based Linux distributions such as [Ubuntu](https://ubuntu.com/).
 
-Configuration options are documented in [`MakerDebConfig`](https://js.electronforge.io/interfaces/_electron_forge_maker_deb.MakerDebConfig.html).
+### Requirements
+
+You can only build the deb target on Linux or macOS machines with the [`fakeroot`](https://wiki.debian.org/FakeRoot) and [`dpkg`](https://wiki.debian.org/dpkg) packages installed.
+
+### Installation
+
+```bash
+npm install --save-dev @electron-forge/maker-deb
+```
 
 ### Usage
 
+To use `@electron-forge/maker-deb`, add it to the `makers` array in your [Forge configuration](../configuration.md):
+
+{% code title="forge.config.js" %}
 ```javascript
-{
-  name: '@electron-forge/maker-deb',
-  config: {
-    options: {
-      maintainer: 'Joe Bloggs',
-      homepage: 'https://example.com'
+module.exports = {
+  makers: [
+    {
+      name: '@electron-forge/maker-deb',
+      config: {
+        options: {
+          maintainer: 'Joe Bloggs',
+          homepage: 'https://example.com'
+        }
+      }
     }
-  }
+  ]
 }
 ```
+{% endcode %}
 
+Configuration options are documented in [`MakerDebConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_deb.MakerDebConfig.html).
+
+### Debugging
+
+For advanced debug logging for this maker, add the `DEBUG=electron-installer-deb*` environment variable.

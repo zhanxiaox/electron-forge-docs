@@ -15,30 +15,39 @@ The flat installer package format is sparsely documented by Apple. If you want t
 * [Flat Package Format - The missing documentation](http://s.sudre.free.fr/Stuff/Ivanhoe/FLAT.html) (Stéphane Sudre)
 * [The Flat Package - Examining a newer package format](https://preserve.mactech.com/articles/mactech/Vol.26/26.02/TheFlatPackage/index.html) (MacTech)
 
-## Usage
+### Requirements
 
-{% hint style="warning" %}
 You can only build the pkg target on macOS machines while targeting the `darwin` or `mas` platforms.
-{% endhint %}
 
-To use `@electron-forge/maker-pkg`, add it to the `makers` array in your Forge configuration.
+### Installation
 
-<pre class="language-javascript" data-title="forge.config.js"><code class="lang-javascript">module.exports = {
+```bash
+npm install --save-dev @electron-forge/maker-pkg
+```
+
+### Usage
+
+To use `@electron-forge/maker-pkg`, add it to the `makers` array in your [Forge configuration](../configuration.md):
+
+{% code title="forge.config.js" %}
+```javascript
+module.exports = {
   makers: [
-<strong>    {
-</strong><strong>      name: '@electron-forge/maker-pkg',
-</strong><strong>      config: {
-</strong><strong>        keychain: 'my-secret-ci-keychain'
-</strong><strong>        // other configuration options
-</strong><strong>      }
-</strong><strong>    }
-</strong>  ]
+    {
+      name: '@electron-forge/maker-pkg',
+      config: {
+        keychain: 'my-secret-ci-keychain'
+        // other configuration options
+      }
+    }
+  ]
 };
-</code></pre>
+```
+{% endcode %}
 
 All configuration options are optional, and options are documented in the API docs for [`MakerPkgConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_pkg.MakerPKGConfig.html).
 
-### Installation scripts
+### Adding installation scripts
 
 With the pkg maker, you can add either a `preinstall` or `postinstall` bash script that runs before and after your app is installed, respectively.
 
@@ -75,8 +84,8 @@ module.exports = {
 
 </code></pre>
 
-## Debugging
+### Debugging
 
 All logs for your flat package installer can be found in macOS installation logs, which are stored in `/var/log/install.log`. They are also accessible within the [Console.app](https://support.apple.com/en-ca/guide/console/welcome/mac) utility.
 
-For advanced debug logging for this maker, add the `DEBUG=electron-osx-sign` environment variable.
+For advanced debug logging for this maker, add the `DEBUG=electron-osx-sign*` environment variable.

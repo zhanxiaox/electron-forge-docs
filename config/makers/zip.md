@@ -4,9 +4,15 @@ description: Create a ZIP archive for your Electron app using Electron Forge.
 
 # ZIP
 
-The ZIP target builds basic [.zip archives](https://en.wikipedia.org/wiki/ZIP_(file_format)) containing your packaged application. There are no platform-specific dependencies for using this maker and it will run on any platform.
+The ZIP target builds basic [.zip archives](https://en.wikipedia.org/wiki/ZIP\_\(file\_format\)) containing your packaged application. There are no platform-specific dependencies for using this maker and it will run on any platform.
 
-## Usage
+### Installation
+
+```bash
+npm install --save-dev @electron-forge/maker-zip
+```
+
+### Usage
 
 To use `@electron-forge/maker-zip`, add it to the `makers` array in your Forge configuration.
 
@@ -22,7 +28,7 @@ module.exports = {
 ```
 {% endcode %}
 
-All configuration options are optional, and options are documented in the API docs for [MakerZIPConfig](https://js.electronforge.io/interfaces/_electron_forge_maker_zip.MakerZIPConfig.html).
+All configuration options are optional, and options are documented in the API docs for [MakerZIPConfig](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_zip.MakerZIPConfig.html).
 
 ### Static file auto-updates (macOS)
 
@@ -68,4 +74,4 @@ The first time you run `make` with this parameter configured, an architecture-sp
 
 Once this asset is uploaded to the bucket, subsequent runs will read from the existing manifest at `https://my-bucket.s3.amazonaws.com/my-app-updates/darwin/arm64/RELEASES.json` and modify it to update the `currentRelease` property to the next version that is built.
 
-For end-to-end instructions on this process, including how to publish assets to S3 and set up the autoUpdater to read the `RELEASES.json` manifest, see the [Auto updating from S3](../publishers/s3.md#auto-updating-from-s3 "mention") guide.
+For end-to-end instructions on this process, including how to publish assets to S3 and set up the autoUpdater to read the `RELEASES.json` manifest, see the [#auto-updating-from-s3](../publishers/s3.md#auto-updating-from-s3 "mention") guide.

@@ -10,9 +10,17 @@ The Squirrel.Windows target builds your application using the [Squirrel.Windows]
 
 Squirrel.Windows is a no-prompt, no-hassle, no-admin method of installing Windows applications, and is therefore the most user friendly you can get.
 
-You can only build the Squirrel.Windows target on a Windows machine or on a Linux machine with `mono` and `wine` installed.
+### Requirements
 
-## Usage
+You can only build the Squirrel.Windows target on a Windows machine or on a Linux machine with [`mono`](https://www.mono-project.com/) and [`wine`](https://www.winehq.org/) installed.
+
+### Installation
+
+```bash
+npm install --save-dev @electron-forge/maker-squirrel
+```
+
+### Usage
 
 Add this module to the [makers](./) section of your [Forge configuration](../configuration.md):
 
@@ -32,8 +40,6 @@ module.exports = {
 ```
 {% endcode %}
 
-## Configuration
-
 The Squirrel.Windows maker inherits all of its config options from the [`electron-winstaller`](https://github.com/electron/windows-installer) module, _except_ for `appDirectory` and `outputDirectory`, which are set by the maker.
 
 Complete configuration options are documented in the [`MakerSquirrelConfig`](https://js.electronforge.io/modules/\_electron\_forge\_maker\_squirrel.html#MakerSquirrelConfig) types.
@@ -44,7 +50,7 @@ Squirrel.Windows requires mandatory package metadata to satisfy the [`.nuspec`](
 
 #### In package.json
 
-By default, the Squirrel.Windows maker fetches the `author` and `description` fields in the  project's package.json file.
+By default, the Squirrel.Windows maker fetches the `author` and `description` fields in the project's package.json file.
 
 {% code title="package.json" %}
 ```jsonc
@@ -81,9 +87,9 @@ module.exports = {
 Note that the Forge config field is **"authors"** while the package.json field is called **"author".**
 {% endhint %}
 
-## Handling startup events
+### Handling startup events
 
-When first running your app, updating it, and uninstalling it, Squirrel.Windows will spawn your app an additional time with some special arguments. You can read more about these arguments on the [`electron-winstaller`](https://github.com/electron/windows-installer)  README.
+When first running your app, updating it, and uninstalling it, Squirrel.Windows will spawn your app an additional time with some special arguments. You can read more about these arguments on the [`electron-winstaller`](https://github.com/electron/windows-installer) README.
 
 The easiest way to handle these arguments and stop your app launching multiple times during these events is to use the [`electron-squirrel-startup`](https://github.com/mongodb-js/electron-squirrel-startup) module as one of the first things your app does.
 
@@ -95,3 +101,7 @@ const { app } = require('electron');
 if (require('electron-squirrel-startup')) app.quit();
 ```
 {% endcode %}
+
+### Debugging
+
+For advanced debug logging for this maker, add the `DEBUG=electron-windows-installer*` environment variable.

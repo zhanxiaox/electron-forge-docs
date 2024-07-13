@@ -29,7 +29,7 @@
   * [Snapcraft](config/makers/snapcraft.md)
   * [Squirrel.Windows](config/makers/squirrel.windows.md)
   * [WiX MSI](config/makers/wix-msi.md)
-  * [Zip](config/makers/zip.md)
+  * [ZIP](config/makers/zip.md)
 * [Publishers](config/publishers/README.md)
   * [Bitbucket](config/publishers/bitbucket.md)
   * [Electron Release Server](config/publishers/electron-release-server.md)
