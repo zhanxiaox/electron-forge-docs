@@ -8,17 +8,17 @@ description: >-
 
 The deb target builds [`.deb` packages](https://www.debian.org/doc/manuals/debian-faq/pkg-basics.en.html), which are the standard package format for Debian-based Linux distributions such as [Ubuntu](https://ubuntu.com/).
 
-### Requirements
+## Requirements
 
 You can only build the deb target on Linux or macOS machines with the [`fakeroot`](https://wiki.debian.org/FakeRoot) and [`dpkg`](https://wiki.debian.org/dpkg) packages installed.
 
-### Installation
+## Installation
 
 ```bash
 npm install --save-dev @electron-forge/maker-deb
 ```
 
-### Usage
+## Usage
 
 To use `@electron-forge/maker-deb`, add it to the `makers` array in your [Forge configuration](../configuration.md):
 
@@ -42,6 +42,6 @@ module.exports = {
 
 Configuration options are documented in [`MakerDebConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_deb.MakerDebConfig.html).
 
-### Debugging
+## Debugging
 
 For advanced debug logging for this maker, add the `DEBUG=electron-installer-deb*` environment variable.

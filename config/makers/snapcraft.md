@@ -6,17 +6,17 @@ description: Create a Snap package for your Electron app using Electron Forge.
 
 The [Snapcraft](https://snapcraft.io/) target builds `.snap` files, which is the packaging format created and sponsored by Canonical, the company behind Ubuntu. It is a sandboxed package format that lets users of various Linux distributions install your application in an isolated environment on their machine.
 
-### Requirements
+## Requirements
 
 You can only build the Snapcraft target on Linux systems with the [`snapcraft`](https://snapcraft.io/) package installed.
 
-### Installation
+## Installation
 
 ```bash
 npm install --save-dev @electron-forge/maker-snap
 ```
 
-### Usage
+## Usage
 
 To use `@electron-forge/maker-snap`, add it to the `makers` array in your [Forge configuration](../configuration.md):
 
@@ -42,6 +42,6 @@ module.exports = {
 
 Configuration options are documented in [`MakerSnapConfig`](https://js.electronforge.io/modules/\_electron\_forge\_maker\_snap.html#MakerSnapConfig).
 
-### Debugging
+## Debugging
 
 For advanced debug logging for this maker, add the `DEBUG=electron-installer-snap*` environment variable.

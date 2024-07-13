@@ -8,7 +8,7 @@ description: >-
 
 The RPM target builds `.rpm` files, which is the standard package format for Red Hat-based Linux distributions such as [Fedora](https://fedoraproject.org/) and [Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) (RHEL).
 
-### Requirements
+## Requirements
 
 You can only build the RPM target on Linux machines with the `rpm` or `rpm-build` packages installed.
 
@@ -24,13 +24,13 @@ While on Debian or Ubuntu you'll need to do this:
 sudo apt-get install rpm
 ```
 
-### Installation
+## Installation
 
 ```shell
 npm install --save-dev @electron-forge/maker-rpm
 ```
 
-### Usage
+## Usage
 
 To use `@electron-forge/maker-rpm`, add it to the `makers` array in your [Forge configuration](../configuration.md):
 
@@ -53,6 +53,6 @@ module.exports = {
 
 Configuration options are documented in [`MakerRpmConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_rpm.MakerRpmConfig.html).
 
-### Debugging
+## Debugging
 
 For advanced debug logging for this maker, add the `DEBUG=electron-installer-redhat*` environment variable.

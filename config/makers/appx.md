@@ -8,17 +8,17 @@ description: >-
 
 The AppX target builds `.appx` packages which are designed to target the [Microsoft Store](https://apps.microsoft.com/home).
 
-### Requirements
+## Requirements
 
 You can only build the AppX target on Windows 10 or 11 machines with the [Windows SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/) installed. Check the [`electron-windows-store` docs](https://github.com/electron-userland/electron-windows-store) for more information on platform requirements.
 
-### Installation
+## Installation
 
 ```bash
 npm install --save-dev @electron-forge/maker-appx
 ```
 
-### Usage
+## Usage
 
 To use `@electron-forge/maker-appx`, add it to the `makers` array in your [Forge configuration](../configuration.md):
 
@@ -41,6 +41,6 @@ module.exports = {
 
 Configuration options are documented in [`MakerAppXConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_maker\_appx.MakerAppXConfig.html).
 
-### Debugging
+## Debugging
 
 For advanced debug logging for this maker, add the `DEBUG=electron-windows-store*` environment variable.

@@ -15,17 +15,17 @@ The flat installer package format is sparsely documented by Apple. If you want t
 * [Flat Package Format - The missing documentation](http://s.sudre.free.fr/Stuff/Ivanhoe/FLAT.html) (Stéphane Sudre)
 * [The Flat Package - Examining a newer package format](https://preserve.mactech.com/articles/mactech/Vol.26/26.02/TheFlatPackage/index.html) (MacTech)
 
-### Requirements
+## Requirements
 
 You can only build the pkg target on macOS machines while targeting the `darwin` or `mas` platforms.
 
-### Installation
+## Installation
 
 ```bash
 npm install --save-dev @electron-forge/maker-pkg
 ```
 
-### Usage
+## Usage
 
 To use `@electron-forge/maker-pkg`, add it to the `makers` array in your [Forge configuration](../configuration.md):
 
@@ -84,7 +84,7 @@ module.exports = {
 
 </code></pre>
 
-### Debugging
+## Debugging
 
 All logs for your flat package installer can be found in macOS installation logs, which are stored in `/var/log/install.log`. They are also accessible within the [Console.app](https://support.apple.com/en-ca/guide/console/welcome/mac) utility.
 

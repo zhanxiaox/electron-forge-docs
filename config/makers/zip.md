@@ -6,13 +6,13 @@ description: Create a ZIP archive for your Electron app using Electron Forge.
 
 The ZIP target builds basic [.zip archives](https://en.wikipedia.org/wiki/ZIP\_\(file\_format\)) containing your packaged application. There are no platform-specific dependencies for using this maker and it will run on any platform.
 
-### Installation
+## Installation
 
 ```bash
 npm install --save-dev @electron-forge/maker-zip
 ```
 
-### Usage
+## Usage
 
 To use `@electron-forge/maker-zip`, add it to the `makers` array in your Forge configuration.
 

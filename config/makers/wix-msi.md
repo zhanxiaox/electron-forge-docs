@@ -10,7 +10,7 @@ The WiX MSI target builds `.msi` files, which are "traditional" Windows installe
 We generally recommend using the [squirrel.windows.md](squirrel.windows.md "mention") target over using this one. These MSI files are a worse user experience for installation but sometimes it is necessary to build MSI files to appease large-scale enterprise companies with internal application distribution policies.
 {% endhint %}
 
-### Requirements
+## Requirements
 
 You can only build the WiX MSI target on machines with [WiX Toolset v3](https://wixtoolset.org/docs/wix3/) installed. We recommend pinning your installation of WiX Toolset to a specific version. You can install WiX Toolset on Windows via [Chocolatey](https://chocolatey.org/).
 
@@ -18,13 +18,13 @@ You can only build the WiX MSI target on machines with [WiX Toolset v3](https://
 choco install wixtoolset  --version=3.14.0
 ```
 
-### Installation
+## Installation
 
 ```bash
 npm install --save-dev @electron-forge/maker-wix
 ```
 
-### Usage
+## Usage
 
 To use `@electron-forge/maker-wix`, add it to the `makers` array in your [Forge configuration](../configuration.md):
 

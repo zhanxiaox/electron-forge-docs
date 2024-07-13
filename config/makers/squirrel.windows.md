@@ -10,17 +10,17 @@ The Squirrel.Windows target builds your application using the [Squirrel.Windows]
 
 Squirrel.Windows is a no-prompt, no-hassle, no-admin method of installing Windows applications, and is therefore the most user friendly you can get.
 
-### Requirements
+## Requirements
 
 You can only build the Squirrel.Windows target on a Windows machine or on a Linux machine with [`mono`](https://www.mono-project.com/) and [`wine`](https://www.winehq.org/) installed.
 
-### Installation
+## Installation
 
 ```bash
 npm install --save-dev @electron-forge/maker-squirrel
 ```
 
-### Usage
+## Usage
 
 Add this module to the [makers](./) section of your [Forge configuration](../configuration.md):
 
@@ -102,6 +102,6 @@ if (require('electron-squirrel-startup')) app.quit();
 ```
 {% endcode %}
 
-### Debugging
+## Debugging
 
 For advanced debug logging for this maker, add the `DEBUG=electron-windows-installer*` environment variable.
