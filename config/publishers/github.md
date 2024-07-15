@@ -1,16 +1,14 @@
 # GitHub
 
-The GitHub target publishes all your artifacts to GitHub releases, this allows your users to download the files straight from your repository. If your repository is open source you can use [update.electronjs.org](https://github.com/electron/update.electronjs.org) and get a free hosted update service.
+The GitHub target publishes all your artifacts to GitHub releases, this allows your users to download the files straight from your repository or if your repository is open source you can use [update.electronjs.org](https://github.com/electron/update.electronjs.org) and get a free hosted update service.
 
-## Installation
+Configuration options are documented in [`PublisherGitHubConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_publisher\_github.PublisherGitHubConfig.html)
 
-```bash
-npm install --save-dev @electron-forge/publisher-github
-```
+{% hint style="info" %}
+You can use this target to publish to GitHub Enterprise using the host configuration options of `octokitOptions`. Check out the configuration options linked above.
+{% endhint %}
 
 ## Usage
-
-To use `@electron-forge/publisher-github`, add it to the `publishers` array in your [Forge configuration](../configuration.md):
 
 {% code title="forge.config.js" %}
 ```javascript
@@ -31,12 +29,6 @@ module.exports = {
 };
 ```
 {% endcode %}
-
-Configuration options are documented in [`PublisherGitHubConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_publisher\_github.PublisherGitHubConfig.html).
-
-### Uploading to GitHub Enterprise instances
-
-You can use this target to publish to GitHub Enterprise using the host configuration options of `octokitOptions`. Check out the configuration options linked above.
 
 ### Auto updating from GitHub
 

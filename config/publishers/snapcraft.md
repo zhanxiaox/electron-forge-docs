@@ -1,20 +1,12 @@
 # Snapcraft
 
-The Snapcraft target publishes your `.snap` artifacts to the [Snap Store](https://snapcraft.io/store). All configuration of your package is done via the [snapcraft.md](../makers/snapcraft.md "mention") maker.
+The Snapcraft target publishes your `.snap` artifacts to the [Snap Store](https://snapcraft.io/store). All configuration of your package is done via the [Snapcraft maker](../makers/snapcraft.md).
 
-## Requirements
+This target requires that the system has the `snapcraft` utility installed.
 
-You can only publish to the Snap Store on Linux systems with the [`snapcraft`](https://snapcraft.io/) package installed.
+Configuration options are documented in [`PublisherSnapConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_publisher\_snapcraft.PublisherSnapcraftConfig.html)
 
-## Installation
-
-```bash
-npm install --save-dev @electron-forge/publisher-snapcraft
-```
-
-## Usage
-
-To use `@electron-forge/publisher-snapcraft`, add it to the `publishers` array in your [Forge configuration](../configuration.md):
+### Usage
 
 {% code title="forge.config.js" %}
 ```javascript
@@ -31,5 +23,3 @@ module.exports = {
 };
 ```
 {% endcode %}
-
-Configuration options are documented in [`PublisherSnapConfig`](https://js.electronforge.io/interfaces/\_electron\_forge\_publisher\_snapcraft.PublisherSnapcraftConfig.html).
