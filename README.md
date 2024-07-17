@@ -35,7 +35,7 @@ There are currently four first-party templates:
 * `vite`
 * `vite-typescript`
 
-Both of these templates are built around plugins that bundle your JavaScript code for production and includes a dev server to provide a better developer experience.
+All of these templates are built around plugins that bundle your JavaScript code for production and includes a dev server to provide a better developer experience.
 
 {% hint style="info" %}
 We highly recommend using these templates when initializing your app to take advantage of modern front-end JavaScript tooling.
