@@ -4,7 +4,7 @@ description: Set up your Forge configuration to use TypeScript
 
 # TypeScript Configuration
 
-By default, Electron Forge's [configuration](broken-reference) only supports JavaScript and JSON files as inputs.
+By default, Electron Forge's [configuration](./configuration.md) only supports JavaScript and JSON files as inputs.
 
 Forge also supports configuration files in other languages that transpile down to JavaScript as long as a transpiler is installed locally in your project's `devDependencies`. These configuration files follow the same format as `forge.config.js`.
 
